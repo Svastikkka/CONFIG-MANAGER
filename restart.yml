@@ -1,0 +1,16 @@
+---
+- name: Restart Service after Updating Configuration
+  hosts: "{{ host }}"
+  become: yes
+  become_method: sudo
+
+  tasks:
+
+    - name: Copy updated configuration file
+      copy:
+        content: "{{ lookup('file', '{{ src_path }}') }}"
+        dest: "{{ dest_path }}"
+
+    - name: Restart Service
+      include_role:
+        name: linux_service_restart
