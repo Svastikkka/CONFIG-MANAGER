@@ -16,3 +16,4 @@ File deletions is not handled and ignored.
 Jenkins is used for ci/cd
 Jenkins has vault integrated (done via UI) and Vault stores all the ssh user credentials
 
+# Installation Setup
