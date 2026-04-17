@@ -1,0 +1,44 @@
+{
+
+    "nginx.conf": {
+        "path": "/etc/nginx/nginx.conf",
+        "service": "nginx",
+        "enable": "false"
+    },
+    "files": {
+        "sample.py": {
+            "path": "/home/manshu/TMP/sample.py",
+            "service": "sample.py",
+            "restart_flag": "true",
+            "user": "manshu",
+            "group": "sample",
+            "mode": "750"
+        }
+    },
+    "docker-config": {
+        "nginx.conf": {
+            "path": "/home/manshu/DOCKER/nginx/nginx.conf",
+            "service": "nginx,nginx2",
+            "enable": "false"
+        }
+    },
+    "docker-compose": {
+        "nginx1.yml": {
+            "path": "/home/manshu/DOCKER/nginx/nginx1.yml",
+            "project": "nginx",
+            "service": "nginx1.yml",
+            "enable": "false"
+        },
+        "nginx2.yml": {
+            "path": "/home/manshu/DOCKER/nginx/nginx2.yml",
+            "project": "nginx",
+            "service": "nginx2.yml",
+            "enable": "false"
+        }
+    },
+    "00-installer-config.yaml": {
+        "path": "/etc/netplan/00-installer-config.yaml",
+        "service": "netplan",
+        "enable": "false"
+    }
+}

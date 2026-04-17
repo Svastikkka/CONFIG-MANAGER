@@ -1,0 +1,25 @@
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    enp8s0:
+      match:
+        macaddress: "12:12:12:12:11:21"   # must be valid 6-byte MAC
+      set-name: enp8s0
+
+      dhcp4: no
+      addresses:
+        - 192.168.0.101/24
+
+      nameservers:
+        addresses:
+          - 8.8.8.8
+          - 8.8.4.4
+          - 4.2.2.2
+
+      routes:
+        - to: default
+          via: 192.168.0.4
+
+        - to: 192.168.10.0/24
+          via: 192.168.0.1

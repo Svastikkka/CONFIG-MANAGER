@@ -1,0 +1,10 @@
+---
+- name: Send notification to Google Chat if {{ service }} doesn't exist
+  uri:
+    url: "GOOGLE_WEBHOOK_URL"
+    method: POST
+    body_format: json
+    body: '{"text": "The {{ service }} does not exist and could not be restarted and build URL: http://192.168.0.209:8080/job/{{ jobName }}/{{ buildNumber }}"}'
+    status_code: 200
+    headers:
+      Content-Type: "application/json"
