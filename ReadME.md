@@ -9,7 +9,8 @@ We need following tools to run this project
 
 # Limitations
 
-File deletions is not handled and ignored.
+- File deletions is not handled and ignored.
+- It is tested on Ubuntu Operating System.
 
 # Components
 
